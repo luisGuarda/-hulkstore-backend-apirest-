@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hulkstore.springboot.backend.apirest.models.entity.Producto;
-import com.hulkstore.springboot.backend.apirest.models.services.ProductoServiceImpl;
+import com.hulkstore.springboot.backend.apirest.models.repository.ProductoServiceImpl;
 
 /**
  * Clase Controller
@@ -25,13 +25,19 @@ import com.hulkstore.springboot.backend.apirest.models.services.ProductoServiceI
  * @author Luis Guarda
  *
  */
-@CrossOrigin(origins = { "http://localhost:4200" })
+@CrossOrigin(origins = { "*" })
 @RestController
 @RequestMapping("/api")
 public class HulkstoreRestController {
 	@Autowired
 	private ProductoServiceImpl productoService;
 
+	@GetMapping("/login")
+	public String index() {
+		return "logeo existoso";
+	}
+	
+	
 	/**
 	 * Controlador para listar productos.
 	 * 
@@ -41,7 +47,7 @@ public class HulkstoreRestController {
 	 * 
 	 */
 	@GetMapping("/productos")
-	public List<Producto> index() {
+	public List<Producto> listProductos() {
 
 		return productoService.findAll();
 

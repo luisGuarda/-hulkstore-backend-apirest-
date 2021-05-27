@@ -1,4 +1,4 @@
-package com.hulkstore.springboot.backend.apirest.models.services;
+package com.hulkstore.springboot.backend.apirest.models.repository;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.hulkstore.springboot.backend.apirest.models.dao.IProductoDao;
 import com.hulkstore.springboot.backend.apirest.models.entity.Producto;
+import com.hulkstore.springboot.backend.apirest.models.services.IProductoService;
 
 
 /**
