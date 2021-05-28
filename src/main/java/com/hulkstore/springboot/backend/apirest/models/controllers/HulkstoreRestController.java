@@ -33,8 +33,8 @@ public class HulkstoreRestController {
 	private ProductoServiceImpl productoService;
 
 	@GetMapping("/login")
-	public String index() {
-		return "logeo existoso";
+	public Boolean index() {
+		return true;
 	}
 	
 	

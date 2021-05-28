@@ -22,8 +22,19 @@ Si desea consultar los valores de los registros de esta tabla debe usar los sigu
 
 `use db_hulkstore_backend;`
 
-`select * from producto;`
+`select * from db_hulkstore_backend.producto;`
 
+`select * from db_hulkstore_backend.user;`
+
+`select * from db_hulkstore_backend.authority;`
+
+`select * from db_hulkstore_backend.authorities_users;`
+
+## Usuario y contraseña de la base de datos
+
+`user=root`
+
+`password=admin`
 
 ## Ojo
 
